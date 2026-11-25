@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="card">
+
+        <h1>Contact Us</h1>
+
+        <form id="contactform" novalidate>
+
+            <div class="row">
+                <div class="field">
+                    <label  for ="firstname">First Name <span>*</span></label>
+                    <input type="text" id="firstname" required>
+                    <small class="error" id="errfirst">This Field is required</small>
+                </div>
+
+                <div class="field">
+                    <label for="lastname">Lastame <span>*</span></label>
+                    <input type="text" id="lastname" required>
+                    <small class="error" id="errlast">This field is required</small>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" required>
+                <small class="error" id="erremail">Please enter a valid email address</small>
+            </div>
+
+            <div class="field">
+                <label>Query Type <span>*</span></label>
+                <div class="row">
+                    <label class="radio-box">
+                        <input type="radio" name="query" value="General Enquiry">
+                        <span class="radio-circle"></span>
+                        General Enquiry
+                    </label>
+                    <label class="radio-box">
+                        <input type="radio" name="query" value="support Request">
+                        <span class="radio-circle"></span>
+                        support Request
+                    </label>
+                </div>
+                <small class="error" id="errquery">Please select a Query type </small>
+            </div>
+
+            <div class="field">
+                <label for="message">Message <span>*</span></label>
+                <textarea id="message" rows="4" required></textarea>
+                <small class="error" id="errmessage">This field is required</small>
+            </div>
+,
+            <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
+  <input type="checkbox" id="consent" style="width:18px; height:18px; margin-top:2px; accent-color:#0c7d69; cursor:pointer;">
+  <span>I consent to being contacted by the team</span>
+</label>
+<p class="error" id="errconsent">To submit this form, please consent to being contacted.</p>
+
+            <small class="error" id="errconsent">to submit this Form,please consent to being contacted</small>
+
+            <button type="submit" class="submit-btn">Submit</button>
+            <div class="success" id="successbox">
+                <strong>Message Sent!</strong>
+                <p>thanks for completing the form. we'll be in touch soon!</p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
